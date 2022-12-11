@@ -29,7 +29,7 @@ perform multiple tasks such as detection or segmentation
 detectron2/blob/main/MODEL_ZOO.md)
 
 For this project, I used an instance segmentation model
-(Mask R-CNN [3] with ResNeXt-101-32x8d) which
+(Mask R-CNN with ResNeXt-101-32x8d) which
 provide both bounding boxes and segmentation of detected
 object with a good box average precision on COCO (44.3).
 For each image, I croped the highest confident bird box and
@@ -42,9 +42,8 @@ the original image is kept and added to the new dataset.
 ### Data Augmentation: 
 
 Data Augmentation can greatly improve the accuracy of
-vision transformers fine-tunned models according to [4].
-I added random Horizontal flip (0.4) and RandAugment
-[1] to my data set during training. 
+vision transformers fine-tunned models.
+I added random Horizontal flip (0.4) and \textbf{RandAugment} to my data set during training. 
 
 Finally, I resized the images to shape (384,384,3) so
 that it could fit pretrained vision transformer models. 
@@ -59,8 +58,7 @@ EfficientNet with linear layers on top but I couldn’t get
 over 0.77 accuracy score on the public leaderboard.
 
 I finally tried various pretrained vision transformer
-models from timm library https://github.com/
-rwightman/pytorch-image-models to which I
+models from timm library to which I
 added 3 linear layers whith dropout to limit overfitting. I
 finally selected the vit base resnet50 384 model. Vision
 Transformer have recently received a huge interest in the
@@ -79,9 +77,9 @@ order to limit overfitting. The model stoped training after
 
 ### References: 
 
--  E. D. Cubuk, B. Zoph, J. Shlens, and Q. V. Le. Randaugment:
-Practical data augmentation with no separate search. CoRR,
-abs/1909.13719, 2019.
+-  E. D. Cubuk, B. Zoph, J. Shlens, and Q. V. Le. [Randaugment:
+Practical data augmentation with no separate search](https://arxiv.org/abs/1909.13719). CoRR,
+abs/1909.13719, 2019. 
 -  A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn,
 X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer,
 G. Heigold, S. Gelly, J. Uszkoreit, and N. Houlsby. An image
