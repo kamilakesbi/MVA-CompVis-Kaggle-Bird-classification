@@ -28,7 +28,7 @@ perform multiple tasks such as detection or segmentation
 : [detectron2](https://github.com/facebookresearch/
 detectron2/blob/main/MODEL_ZOO.md)
 
-For this project, I used an instance segmentation model
+For this project, I used an **instance segmentation model**
 (Mask R-CNN with ResNeXt-101-32x8d) which
 provide both bounding boxes and segmentation of detected
 object with a good box average precision on COCO (44.3).
@@ -50,7 +50,7 @@ that it could fit pretrained vision transformer models.
 
 ## Model: 
 
-Transfer-learning works well for small datasets : using
+**Transfer-learning** works well for small datasets : using
 a pretrained model on a huge data set can help get much
 complex image representations and build more performant
 models. I first tried to fine tune pretrained ResNet and
@@ -59,10 +59,10 @@ over 0.77 accuracy score on the public leaderboard.
 
 I finally tried various pretrained vision transformer
 models from timm library to which I
-added 3 linear layers whith dropout to limit overfitting. I
+**added 3 linear layers whith dropout to limit overfitting**. I
 finally selected the vit base resnet50 384 model. Vision
 Transformer have recently received a huge interest in the
-Computer Vision community [2].
+Computer Vision community.
 
 
 ## Trainings and results: 
@@ -70,7 +70,7 @@ Computer Vision community [2].
 I trained the model for 30 epochs on training set and evaluated it on validation set. I used Adam Optimizer, cross
 entropy criterion and early stopping (4 patience steps) in
 order to limit overfitting. The model stoped training after
-14 epochs because of EarlyStopping. It reached 0.87 accuracy on the public leaderboard.
+14 epochs because of EarlyStopping. **It reached 0.87 accuracy on the public leaderboard**.
 
 ![accuracy](images/vit_accuracy_evolution.png)
 
