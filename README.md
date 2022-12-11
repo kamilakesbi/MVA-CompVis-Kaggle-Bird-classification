@@ -19,8 +19,8 @@ I ranked 6th out of 164 participants on the private leaderboard:
 
 ### Birds detection: 
 
-I created a new data set containing only croped boxes of
-detected birds for each image. This can help the classification model focus more on birds and less on non relevant
+I created a new data set containing only **croped boxes of
+detected birds** for each image. This can help the classification model focus more on birds and less on non relevant
 image parts. In order to do this, I used the detectron2
 open source code published by FAIR. This package provide
 multiple pretrained model on the COCO dataset that can
@@ -43,7 +43,7 @@ the original image is kept and added to the new dataset.
 
 Data Augmentation can greatly improve the accuracy of
 vision transformers fine-tunned models.
-I added random Horizontal flip (0.4) and \textbf{RandAugment} to my data set during training. 
+I added random **Horizontal flip** (0.4) and **RandAugment** to my data set during training. 
 
 Finally, I resized the images to shape (384,384,3) so
 that it could fit pretrained vision transformer models. 
