@@ -1,0 +1,6 @@
+pyyaml
+pytorch=1.10
+torchvision
+detectron2 
+opencv-python
+timm
