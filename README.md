@@ -10,7 +10,7 @@ It contains a training set, a validation set and a test set of
 classification model to predict species of birds among 20
 different classes. The dataset can downloaded [here](https://www.kaggle.com/competitions/mva-recvis-2021/data). 
 
-I ranked 6th out of 164 participants on the private leaderboard: 
+I ranked **6th out of 164 participants** on the private leaderboard: 
 
 ![Ranking](images/compet_result.png)
 
